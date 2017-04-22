@@ -29,14 +29,15 @@ canvas {
   vertical-align: middle;
   border: 1px solid lightgrey;
   border-radius: 5px;
-  width: 320px;
+  width: 450px;
 }
 
 .overlay label {
     vertical-align:middle;
+    width: 30%;
 }
 
 .overlay input {
     vertical-align:middle;
-    width: 80%;
+    width: 70%;
 }
