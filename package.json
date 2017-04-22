@@ -1,0 +1,25 @@
+{
+  "name": "modulo-times-table",
+  "version": "1.0.0",
+  "description": "Interactive visualization of a modulo times table ",
+  "scripts": {
+    "lint": "eslint src/**.js",
+    "test": "npm run lint",
+    "build": "npm test && webpack",
+    "start": "webpack-dev-server"
+  },
+  "author": "javinor",
+  "repository": "git@github.com:javinor/modulo-times-table.git",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^0.26.1",
+    "eslint": "^3.1.1",
+    "eslint-config-standard": "^5.3.5",
+    "eslint-plugin-promise": "^2.0.0",
+    "eslint-plugin-standard": "^2.0.0",
+    "html-webpack-plugin": "^2.28.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^1.16.3"
+  }
+}
