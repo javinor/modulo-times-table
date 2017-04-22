@@ -20,5 +20,12 @@ window.onload = function () {
   multiplyRange.value = multiplyLabel.innerHTML = moduloTimesTable.multiplier
   multiplyRange.oninput = (event) => { moduloTimesTable.multiplier = multiplyLabel.innerHTML = event.target.value }
 
+  const stepUpMultiplier = () => {
+    multiplyRange.stepUp()
+    moduloTimesTable.multiplier = multiplyLabel.innerHTML = multiplyRange.value
+    window.requestAnimationFrame(stepUpMultiplier)
+  }
+  window.requestAnimationFrame(stepUpMultiplier)
+
   moduloTimesTable.render()
 }
