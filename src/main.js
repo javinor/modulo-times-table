@@ -4,19 +4,21 @@ import './main.css'
 import ModuloTimesTable from './ModuloTimesTable'
 
 window.onload = function () {
-  let canvas = document.querySelector('#canvas')
+  const canvas = document.querySelector('#canvas')
   canvas.width = document.documentElement.clientWidth
   canvas.height = document.documentElement.clientHeight
 
-  let moduloTimesTable = new ModuloTimesTable(canvas)
+  const moduloTimesTable = new ModuloTimesTable(canvas, 571, 2)
 
-  let moduloRange = document.querySelector('#moduloRange')
-  moduloRange.value = moduloTimesTable.modulo
-  moduloRange.oninput = (event) => { moduloTimesTable.modulo = event.target.value }
+  const moduloRange = document.querySelector('#moduloRange')
+  const moduloLabel = document.querySelector('#moduloRangeLabel')
+  moduloRange.value = moduloLabel.innerHTML = moduloTimesTable.modulo
+  moduloRange.oninput = (event) => { moduloTimesTable.modulo = moduloLabel.innerHTML = event.target.value }
 
-  let multiplyRange = document.querySelector('#multiplyRange')
-  multiplyRange.value = moduloTimesTable.multiplier
-  multiplyRange.oninput = (event) => { moduloTimesTable.multiplier = event.target.value }
+  const multiplyRange = document.querySelector('#multiplyRange')
+  const multiplyLabel = document.querySelector('#multiplyRangeLabel')
+  multiplyRange.value = multiplyLabel.innerHTML = moduloTimesTable.multiplier
+  multiplyRange.oninput = (event) => { moduloTimesTable.multiplier = multiplyLabel.innerHTML = event.target.value }
 
   moduloTimesTable.render()
 }
